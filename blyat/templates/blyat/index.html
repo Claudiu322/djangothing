@@ -1,0 +1,39 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'blyat/style.css' %}">
+<head>
+    <title>ce-ai mancat?</title>
+</head>
+<body>
+    <header>
+        <h1>Înrebări întrebătoare</h1>
+    </header>
+    {% if latest_question_list %}
+    <p>Claudiu e frumos</p>
+    <ul>
+        {% for question in latest_question_list %}
+            <li><a href="{% url 'blyat:detail' question.id %}">{{ question.question_text }}</a></li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No polls are available</p>
+    {% endif %}
+    <div class="navi">
+        <p>despacito</p>
+        <p>despacito</p>
+        <p>despacito</p>
+        <p>despacito</p>
+        <p>despacito</p>
+        <p>despacito</p>
+        <p>despacito</p>
+        <p>despacito</p>
+        <p>despacito</p>
+        <p>despacito</p>
+        <p>despacito</p>
+        <p>despacito</p>
+        <p>despacito</p>
+        <p>despacito</p>
+        <p>despacito</p>
+        <p>despacito</p>
+    </div>
+</body>
